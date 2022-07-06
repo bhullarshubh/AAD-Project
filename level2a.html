@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Level 2a</title>
+<script src="script.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>LEVEL 2a</h1>
+    <h3>Quick sort</h3>
+    <h4>Read the tutorial first if you are not confident in this topic and then solve this level.</h4>
+    <pre>
+        1) First try to sort an array using quick sort:
+          <a href="https://practice.geeksforgeeks.org/problems/quick-sort/1">Click here to go to online editor</a>
+    </pre>
+    <button onclick="ShowDiv1()" width="100" height="30">SHOW</button>
+    <button onclick="HideDiv1()" width="100" height="30">HIDE</button>
+    <div id="dropdown1" style="display:none">
+        <pre>
+            Purpose of this question to make sure you know how to write quicksort algorithm.</pre>
+    </div>
+    <pre>
+        2) Consider the Quicksort algorithm. Suppose there is a procedure for finding a pivot element which splits the list into two sub-lists each
+        of which contains at least one-fifth of the elements. Let T(n) be the number of comparisons required to sort n elements. Then
+
+        A)T(n) <= 2T(n/5) + n
+        B)T(n) <= T(n/5) + T(4n/5) + n
+        C)T(n) <= 2T(4n/5) + n
+        D)T(n) <= 2T(n/2) + n
+    </pre>
+    <button onclick="ShowDiv2()" width="100" height="30">SHOW</button>
+    <button onclick="HideDiv2()" width="100" height="30">HIDE</button>
+    <div id="dropdown2" style="display:none">
+        <pre>
+            Correct answer is B.
+            For the case where n/5 elements are in one subset, T(n/5) comparisons are needed for the first subset with n/5 elements, T(4n/5) is 
+            for the rest 4n/5 elements, and n is for finding the pivot. If there are more than n/5 elements in one set then other set will have 
+            less than 4n/5 elements and time complexity will be less than T(n/5) + T(4n/5) + n because recursion tree will be more balanced.
+        </pre>
+    </div>
+    <pre>
+        3) You have an array of n elements. Suppose you implement quicksort by always choosing the central element of the array as the pivot. Then 
+        the tightest upper bound for the worst case performance is
+
+        A)O(n<sup>2</sup>)
+        B)O(nLogn)
+        C)Theta(nLogn)
+        D)O(n<sup>3</sup>)
+    </pre>
+    <button onclick="ShowDiv3()" width="100" height="30">SHOW</button>
+    <button onclick="HideDiv3()" width="100" height="30">HIDE</button>
+    <div id="dropdown3" style="display:none">
+        <pre>
+            Correct answer is A.
+            For any input, there are some permutations for which worst case will be O(n<sup>2</sup>).  In some case, choosing the middle element minimizes the 
+            chances of encountering O(n<sup>2</sup>), but in worst case it can go to O(n<sup>2</sup>). Whichever element we take as Pivot, either first or middle, worst 
+            case will be O(n<sup>2</sup>) since Pivot is fixed in position. While choosing a random pivot minimizes the chances of encountering worst case 
+            i.e. O(n<sup>2</sup>).
+        </pre>
+    </div>
+    <pre>
+        4) What is recurrence for worst case of QuickSort and what is the time complexity in Worst case?
+
+        A)Recurrence is T(n) = T(n-2) + O(n) and time complexity is O(n^2)
+        B)Recurrence is T(n) = T(n-1) + O(n) and time complexity is O(n^2)
+        C)Recurrence is T(n) = 2T(n/2) + O(n) and time complexity is O(nLogn)
+        D)Recurrence is T(n) = T(n/10) + T(9n/10) + O(n) and time complexity is O(nLogn)
+    </pre>
+    <button onclick="ShowDiv4()" width="100" height="30">SHOW</button>
+    <button onclick="HideDiv4()" width="100" height="30">HIDE</button>
+    <div id="dropdown4" style="display:none">
+        <pre>
+            Correct answer is B. This is really basic conceptual question.
+        </pre>
+    </div>
+    <pre>
+        5) Suppose we have a O(n) time algorithm that finds median of an unsorted array. Now consider a QuickSort implementation where we first find 
+        median using the above algorithm, then use median as pivot. What will be the worst case time complexity of this modified QuickSort.
+
+        A)O(n^2 Logn)
+        B)O(n^2)
+        C)O(n Logn Logn)
+        D)O(nLogn)
+    </pre>
+    <button onclick="ShowDiv5()" width="100" height="30">SHOW</button>
+    <button onclick="HideDiv5()" width="100" height="30">HIDE</button>
+    <div id="dropdown5" style="display:none">
+        <pre>
+            If we use median as a pivot element, then the recurrence for all cases becomes T(n) = 2T(n/2) + O(n).
+            The above recurrence can be solved using Master Method.<a href="http://en.wikipedia.org/wiki/Master_theorem">TUTORIAL MASTER THEOREM</a>
+            This question also tells about an important algorithm of finding median in O(n) time.
+        </pre>
+    </div><br><br><br>
+    <a href="tutorial2a.html">TUTORIAL FOR LEVEL 2a</a><br><br>
+    <a href="level2b.html">GO TO NEXT LEVEL(Only after completing this level)</a>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tutorial 2</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Divide and Conquer</h1>
+    <p>In computer science, divide and conquer is an algorithm design paradigm. A divide-and-conquer algorithm recursively breaks down a problem into two or more sub-problems of the same or related type, until these become simple enough to be solved directly. The solutions to the sub-problems are then combined to give a solution to the original problem.</p>
+    <p>Designing efficient divide-and-conquer algorithms can be difficult. As in mathematical induction, it is often necessary to generalize the problem to make it amenable to a recursive solution. The correctness of a divide-and-conquer algorithm is usually proved by mathematical induction, and its computational cost is often determined by solving recurrence relations.</p>
+    <p>Divide and conquer is a powerful tool for solving conceptually difficult problems: all it requires is a way of breaking the problem into sub-problems, of solving the trivial cases, and of combining sub-problems to the original problem.</p>
+    <p>The Divide and conquer approach led to an improvement in the asymptotic cost of the solution. For example, if (a) the base cases have constant-bounded size, the work of splitting the problem and combining the partial solutions is proportional to the problem's size n, and (b) there is a bounded number p of sub-problems of size n/p at each stage, then the cost of the divide-and-conquer algorithm will be O(nlog<sub>p</sub>n).</p>
+    <p>Divide-and-conquer algorithms are naturally adapted for execution in multi-processor machines, especially shared-memory systems where the communication of data between processors does not need to be planned in advance because distinct sub-problems can be executed on different processors.</p>
+    <p>Here are the steps involved:<br>
+
+        1) Divide: Divide the given problem into sub-problems using recursion.<br>
+        2) Conquer: Solve the smaller sub-problems recursively. If the subproblem is small enough, then solve it directly.<br>
+        3) Combine: Combine the solutions of the sub-problems that are part of the recursive process to solve the actual problem.</p>
+    <p>The complexity of the divide and conquer algorithm is calculated using the master theorem.</p>
+    <p>T(n) = aT(n/b) + f(n), where,<br>
+        n = size of input<br>
+        a = number of subproblems in the recursion<br>
+        n/b = size of each subproblem. All subproblems are assumed to have the same size.<br>
+        f(n) = cost of the work done outside the recursive call, which includes the cost of dividing the problem and cost of merging the solutions</p>
+        <p>Here is a great resource for divide and conquer algorithm. Learn from here:</p>
+        <a href="https://www.tutorialspoint.com/data_structures_algorithms/divide_and_conquer.htm">LINK</a>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tutorial 4</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Dynamic programming</h1>
+    <p>Dynamic programming is a technique that breaks the problems into sub-problems, and saves the result for future purposes so that we do not need to compute the result again. The subproblems are optimized to optimize the overall solution is known as optimal substructure property.</p>
+    <p>The main use of dynamic programming is to solve optimization problems. Here, optimization problems mean that when we are trying to find out the minimum or the maximum solution of a problem. The dynamic programming guarantees to find the optimal solution of a problem if the solution exists.</p>
+    <p>The definition of dynamic programming says that it is a technique for solving a complex problem by first breaking into a collection of simpler subproblems, solving each subproblem just once, and then storing their solutions to avoid repetitive computations.</p>
+    <p><strong>The following are the steps that the dynamic programming follows:</strong><br><br>
+
+        1) It breaks down the complex problem into simpler subproblems.<br>
+        2) It finds the optimal solution to these sub-problems.<br>
+        3) It stores the results of subproblems (memoization). The process of storing the results of subproblems is known as memorization.<br>
+        4) It reuses them so that same sub-problem is calculated more than once.<br>
+        5) Finally, calculate the result of the complex problem.</p>
+    <p>Those problems that are having overlapping subproblems and optimal substructures. Here, optimal substructure means that the solution of optimization problems can be obtained by simply combining the optimal solution of all the subproblems.</p>
+    <p>In the case of dynamic programming, the space complexity would be increased as we are storing the intermediate results, but the time complexity would be decreased.</p>
+    <p><strong>There are two approaches to dynamic programming:</strong><br><br>
+        1) Top down approach: The top-down approach follows the memorization technique, while bottom-up approach follows the tabulation method. Here memorization is equal to the sum of recursion and caching. Recursion means calling the function itself, while caching means storing the intermediate results.<br>
+        2) Bottom up approach: The bottom-up approach is also one of the techniques which can be used to implement the dynamic programming. It uses the tabulation technique to implement the dynamic programming approach. It solves the same kind of problems but it removes the recursion. If we remove the recursion, there is no stack overflow issue and no overhead of the recursive functions. In this tabulation technique, we solve the problems and store the results in a matrix.
+    </p>
+    <p>The bottom-up is the approach used to avoid the recursion, thus saving the memory space. The bottom-up is an algorithm that starts from the beginning, whereas the recursive algorithm starts from the end and works backward. In the bottom-up approach, we start from the base case to find the answer for the end. </p>
+</body>
+</html>

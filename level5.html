@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Level 5</title>
+<script src="script.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>LEVEL 5</h1>
+    <h3>Bitwise algorithms</h3>
+    <h4>Read the tutorial first if you are not confident in this topic and then solve this level.</h4>
+    <pre>
+        1) What is the return value of following function for arr[] = {9, 12, 2, 11, 2, 2, 10, 9, 12, 10, 9, 11, 2} and n is size of this array.
+        int fun(int arr[], int n)
+        {
+            int x = arr[0];
+            for (int i = 1; i < n; i++)
+                x = x ^ arr[i];
+            return x;
+        }
+
+        A) 9
+        B) 0
+        C) 2
+        D) 10
+    </pre>
+    <button onclick="ShowDiv1()" width="100" height="30">SHOW</button>
+    <button onclick="HideDiv1()" width="100" height="30">HIDE</button>
+    <div id="dropdown1" style="display:none">
+    <pre>
+        Correct answer is A. This is very common use of XOR used in various questions.
+        Note that 9 is the only element with odd occurrences, all other elements have even occurrences. If the input array has all elements with 
+        even occurrences except one, then the function returns the only element with odd occurrences. Note that XORing an element with itself 
+        results 0 and XOR of 0 with a number x is equal to x.
+    </pre>
+    </div>
+    <pre>
+        2) What does the following C expression do? x = (x<<1) + x + (x>>1);
+            
+        A) Multiplies an integer with 7
+        B) Multiplies an integer with 3.5
+        C) Multiplies an integer with 2
+        D) Multiplies an integer with 9
+    </pre>
+    <button onclick="ShowDiv2()" width="100" height="30">SHOW</button>
+    <button onclick="HideDiv2()" width="100" height="30">HIDE</button>
+    <div id="dropdown2" style="display:none">
+    <pre>
+        Correct answer is B.
+        This question is to enable you to under right and left shift through multiplication and division.
+    </pre>
+    </div>
+    <pre>
+        3) What does the following C expression do?
+            x = x & (x-1)
+
+        A) Sets all bits as 1
+        B) Makes x equals to 0
+        C) Turns off the rightmost set bit
+        D) Turns off the leftmost set bit
+    </pre>
+    <button onclick="ShowDiv3()" width="100" height="30">SHOW</button>
+    <button onclick="HideDiv3()" width="100" height="30">HIDE</button>
+    <div id="dropdown3" style="display:none">
+    <pre>
+        Correct answer is C. 
+        Take 2 cases, rightmost bit of x is 1 and in other case its 0. You will get answer.
+        1/0 & 0 = 0 ; 1 & 1 = 1
+    </pre>
+    </div>
+    <pre>
+        4) What does following function do?
+        bool function (unsigned int x) 
+        { 
+            return (!(x&(x-1))); 
+        }
+    </pre>
+    <button onclick="ShowDiv4()" width="100" height="30">SHOW</button>
+    <button onclick="HideDiv4()" width="100" height="30">HIDE</button>
+    <div id="dropdown4" style="display:none">
+    <pre>
+        This function determines whether x is function of 2 or not(except 0). Refer previous question for this.
+        PLEASE NOTE THAT THIS FUNCTION IS O(1) BECAUSE WE USED BITWISE OPERATION. THAT IS THE CLEAR ADVANTAGE OF BITWISE ALGOS OVER OTHER AS 
+        THEY DRASTICALLY DECREASE COMPLEXITY OF OUR SOLUTION.
+    </pre>
+    </div><br><br><br>
+    <a href="tutorial5.html">TUTORIAL FOR LEVEL 5</a>
+</body>
+</html>

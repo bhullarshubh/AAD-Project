@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Level 1</title>
+<script src="script.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>LEVEL 1</h1>
+    <h3>Time and Space complexity</h3>
+    <h4>Read the tutorial first if you are not confident in this topic and then solve this level.</h4>
+    <pre>
+        Q1) What does it mean when we say that an algorithm X is asymptotically more efficient than Y?
+        A) X will always be a better choice for all inputs.
+        B) X will always be a better choice for large inputs.
+        C) X will always be a better choice for small inputs.
+        D) Y will always be a better choice for small inputs.
+    </pre>
+    <button onclick="ShowDiv1()" width="100" height="30">SHOW</button>
+    <button onclick="HideDiv1()" width="100" height="30">HIDE</button>
+    <div id="dropdown1" style="display:none">
+        <pre>
+            Correct answer is B. This question explains a really important concept about time complexity. We talk about large values of inputs.
+            Maybe Y is a better algorithm for small inputs or sometimes X and sometimes Y but for large inputs X wins.
+        </pre>
+    </div>
+    <pre>
+        Q2) What is time complexity of following code :
+
+        int count = 0;
+        for (int i = N; i > 0; i /= 2) {
+            for (int j = 0; j < i ; j++) {
+                count += 1;
+            }
+        }
+
+        A) O(N * N)
+        B) O(N * log N)
+        C) O(N * log(log(N)))
+        D) O(N)
+        E) O(N * Sqrt(N))
+    </pre>
+    <button onclick="ShowDiv2()" width="100" height="30">SHOW</button>
+    <button onclick="HideDiv2()" width="100" height="30">HIDE</button>
+    <div id="dropdown2" style="display:none">
+        <pre>
+            Correct answer is D. This question will teach you to think complexity in loops and we need to use mathematical techniques in few 
+            questions to calculate their time complexity.
+        </pre>
+    </div>
+    <pre>
+        Q3) What is the time complexity of the following code :
+
+        int i, j, k = 0;
+        for (i  = n/2; i <= n; i++) {
+            for (j = 2; j <= n; j = j * 2) {
+                k = k + n/2;
+            }
+        }
+
+        A) &Theta;(n)
+        B) &Theta;(nLogn)
+        C) &Theta;(n^2)
+        D) &Theta;(n^2 / Logn)
+        E) &Theta;(n^2Logn)
+    </pre>
+    <button onclick="ShowDiv3()" width="100" height="30">SHOW</button>
+    <button onclick="HideDiv3()" width="100" height="30">HIDE</button>
+    <div id="dropdown3" style="display:none">
+        <pre>
+            Correct answer is B. 
+            For studying about asymptotic notations in time complexity <a href="https://www.geeksforgeeks.org/analysis-of-algorithms-set-3asymptotic-notations/">CLICK HERE</a>
+        </pre>
+    </div>
+    <pre>
+        Q4) In the following C++ function, let n >= m.
+
+        int gcd(int n, int m) {
+            if (n%m ==0) return m;
+            if (n < m) swap(n, m);
+            while (m > 0) {
+                n = n%m;
+                swap(n, m);
+            }
+            return n;
+        }
+        What is the time complexity of the above function assuming n > m?
+
+        A) &Theta;(logn)
+        B) &Omega;(n)
+        C) &Theta;(loglogn)
+        D) &Theta;(sqrt(n))
+    </pre>
+    <button onclick="ShowDiv4()" width="100" height="30">SHOW</button>
+    <button onclick="HideDiv4()" width="100" height="30">HIDE</button>
+    <div id="dropdown4" style="display:none">
+        <pre>
+            Correct answer is A. This question shows swap, addition, comparison operations and all take constant time as well as bitset operations.
+        </pre>
+    </div>
+    <pre>
+        Q5) What is the space complexity of the following problem?
+
+        int a = 0, b = 0;
+        for (i = 0; i < N; i++) {
+            a = a + rand();
+        }
+        for (j = 0; j < M; j++) {
+            b = b + rand();
+        }
+    </pre>
+    <button onclick="ShowDiv5()" width="100" height="30">SHOW</button>
+    <button onclick="HideDiv5()" width="100" height="30">HIDE</button>
+    <div id="dropdown5" style="display:none">
+    <pre>
+        Space complexity is O(1). rand() takes no extra space.
+    </pre>
+    </div><br><br><br>
+    <a href="tutorial1.html">TUTORIAL FOR LEVEL 1</a><br><br>
+    <a href="level2.html">GO TO NEXT LEVEL(Only after completing this level)</a>
+</body>

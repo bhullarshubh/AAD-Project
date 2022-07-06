@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tutorial 1</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Algorithmic Analysis</h1>
+    <p>Analysis of efficiency of an algorithm can be performed at two different stages, before implementation and after implementation, as
+    </p>
+    <p>BEFORE: This is defined as theoretical analysis of an algorithm. Efficiency of algorithm is measured by assuming that all other factors e.g. speed of processor, are constant and have no effect on implementation.</p>
+    <p>AFTER: This is defined as empirical analysis of an algorithm. The chosen algorithm is implemented using programming language. Next the chosen algorithm is executed on target computer machine. In this analysis, actual statistics like running time and space needed are collected.</p>
+    <p>Algorithm analysis is dealt with the execution or running time of various operations involved. Running time of an operation can be defined as number of computer instructions executed per operation.</p>
+    <h1>Algorithmic Complexity</h1>
+    <h3>Time Complexity</h3>
+    <p>The time complexity of an algorithm quantifies the amount of time taken by an algorithm to run as a function of the length of the input. Note that the time to run is a function of the length of the input and not the actual execution time of the machine on which the algorithm is running on.</p>
+    <p>Time requirements can be denoted or defined as a numerical function t(N), where t(N) can be measured as the number of steps, provided each step takes constant time.</p>
+    <h3>Space Complexity</h3>
+    <p>Space complexity is a measure of how efficient your code is in terms of memory used.
+        Space complexity analysis happens almost in the same way time complexity analysis happens.</p>
+    <p>Important point:<br>
+        Additional space / memory is measured in terms of the largest memory use by the program when it runs. That is to say, 
+        if you allocated O(N) memory, and later free it, that does not make the space complexity of your program O(1).</p>
+    <p><strong>We can have three cases to analyze an algorithm: </strong></p>
+    <p>1) The Worst Case: In the worst-case analysis, we calculate the upper bound on the running time of an algorithm.</p>
+    <p>2) Average Case: In average case analysis, we take all possible inputs and calculate computing time for all of the inputs. Sum all the calculated values and divide the sum by the total number of inputs. </p>
+    <p>3) Best Case: In the best case analysis, we calculate the lower bound on the running time of an algorithm. We must know the case that causes a minimum number of operations to be executed. </p>
+    <p>Usually we do analysis with worst case as it gives usual picture, sometimes with average case and rarely with best case it has no practical significance.</p>
+</body>
+</html>

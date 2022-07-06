@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Level 3</title>
+<script src="script.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>LEVEL 3</h1>
+    <h3>Greedy algorithm</h3>
+    <h4>Read the tutorial first if you are not confident in this topic and then solve this level.</h4>
+    <pre>
+        Greedy algorithm is a general calss which contains many algorithm. Few important algorithms are tested at this level such as:
+        1) Activity selection problem
+        2) Kruskal’s Minimum Spanning Tree 
+        3) Huffman coding
+        4) Dijkstra shortest path
+    </pre>
+    <h5>Questions</h5>
+    <pre>
+        1) Suppose we run Dijkstra’s single source shortest-path algorithm on the following edge weighted directed graph with vertex P as the 
+           source. In what order do the nodes get included into the set of vertices for which the shortest path distances are finalized?
+           <img src="https://www.geeksforgeeks.org/wp-content/uploads/2009/11/gate2004.GIF">
+
+        A) P, Q, R, S, T, U
+        B) P, Q, R, U, S, T
+        C) P, Q, R, U, T, S
+        D) P, Q, T, R, U, S
+    </pre>
+    <button onclick="ShowDiv1()" width="100" height="30">SHOW</button>
+    <button onclick="HideDiv1()" width="100" height="30">HIDE</button>
+    <div id="dropdown1" style="display:none">
+        <pre>
+            Correct answer is B. This question test basic undersanding of dijikstra.
+        </pre> 
+    </div>
+    <pre>
+        2) Suppose the letters a, b, c, d, e, f have probabilities 1/2, 1/4, 1/8, 1/16, 1/32, 1/32 respectively. Which of the following is the 
+           Huffman code for the letter a, b, c, d, e, f?
+        
+        A) 0, 10, 110, 1110, 11110, 11111
+        B) 11, 10, 011, 010, 001, 000
+        C) 11, 10, 01, 001, 0001, 0000
+        D) 110, 100, 010, 000, 001, 111
+    </pre>
+    <button onclick="ShowDiv2()" width="100" height="30">SHOW</button>
+    <button onclick="HideDiv2()" width="100" height="30">HIDE</button>
+    <div id="dropdown2" style="display:none">
+        <pre>
+            Correct answer is A.
+        </pre>
+    </div>
+    <pre>
+        3) Using Prim's algorithm to construct a minimum spanning tree starting with node A, which one of the following sequences of edges represents 
+        a possible order in which the edges would be added to construct the minimum spanning tree?
+        <img src="https://www.geeksforgeeks.org/wp-content/uploads/gq/2015/12/primsMST.png">
+
+        A) (E, G), (C, F), (F, G), (A, D), (A, B), (A, C)
+        B) (A, D), (A, B), (A, C), (C, F), (G, E), (F, G)
+        C) (A, B), (A, D), (D, F), (F, G), (G, E), (F, C)
+        D) (A, D), (A, B), (D, F), (F, C), (F, G), (G, E)
+    </pre>
+    <button onclick="ShowDiv3()" width="100" height="30">SHOW</button>
+    <button onclick="HideDiv3()" width="100" height="30">HIDE</button>
+    <div id="dropdown3" style="display:none">
+    <pre>
+        Correct answer is D.
+        A and B are False : The idea behind Prim’s algorithm is to construct a spanning tree, means all vertices must be connected but here 
+        vertices are disconnected.
+
+        C is False : Prim's is a greedy algorithm and At every step, it considers all the edges that connect the two sets, and picks the minimum 
+        weight edge from these edges. In this option weight of AB < AD so must be picked up first.
+
+        D is True : It represents a possible order in which the edges would be added to construct the minimum spanning tree. Prim’s algorithm is 
+        also a Greedy algorithm. It starts with an empty spanning tree. The idea is to maintain two sets of vertices. The first set contains the 
+        vertices already included in the MST, the other set contains the vertices not yet included. At every step, it considers all the edges that 
+        connect the two sets, and picks the minimum weight edge from these edges. After picking the edge, it moves the other endpoint of the edge 
+        to the set containing MST.
+    </pre>
+    </div>
+    <pre>
+        4) A text is made up of the characters a, b, c, d, e each occurring with the probability 0.11, 0.40, 0.16, 0.09 and 0.24 respectively. 
+           The optimal Huffman coding technique will have the average length of:
+        
+        A) 2.40
+        B) 2.16
+        C) 2.26
+        D) 2.15
+    </pre>
+    <button onclick="ShowDiv4()" width="100" height="30">SHOW</button>
+    <button onclick="HideDiv4()" width="100" height="30">HIDE</button>
+    <div id="dropdown4" style="display:none">
+        <pre>
+            Correct answer is B.
+            Hint : lenghth for each character = no of bits * frequency of occurence.
+        </pre>
+    </div><br><br><br>
+    <a href="tutorial3.html">TUTORIAL FOR LEVEL 3</a><br><br>
+    <a href="level4.html">GO TO NEXT LEVEL(Only after completing this level)</a>
+</body>
+</html>

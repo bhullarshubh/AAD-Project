@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Level 4</title>
+<script src="script.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>LEVEL 4</h1>
+    <h3>Dynamic programming</h3>
+    <h4>Read the tutorial first if you are not confident in this topic and then solve this level.</h4>
+    <pre>
+        1) Four matrices M1, M2, M3 and M4 of dimensions pxq, qxr, rxs and sxt respectively can be multiplied is several ways with different number
+         of total scalar multiplications. For example, when multiplied as ((M1 X M2) X (M3 X M4)), the total number of multiplications is 
+         pqr + rst + prt. When multiplied as (((M1 X M2) X M3) X M4), the total number of scalar multiplications is pqr + prs + pst. 
+         If p = 10, q = 100, r = 20, s = 5 and t = 80, then the number of scalar multiplications needed is
+        
+        A) 248000
+        B) 44000
+        C) 19000
+        D) 25000
+    </pre>
+    <button onclick="ShowDiv1()" width="100" height="30">SHOW</button>
+    <button onclick="HideDiv1()" width="100" height="30">HIDE</button>
+    <div id="dropdown1" style="display:none">
+        <pre>
+            Correct answer is C. It is a standard problem of dynamic programming.
+            <a href="http://www.geeksforgeeks.org/dynamic-programming-set-8-matrix-chain-multiplication/">CHECK OUT</a>
+        </pre>
+    </div>
+    <pre>
+        2) The subset-sum problem is defined as follows. Given a set of n positive integers, S = {a1 ,a2 ,a3 ,…,an} and positive integer W, is 
+        there a subset of S whose elements sum to W? A dynamic program for solving this problem uses a 2-dimensional Boolean array X, with n 
+        rows and W+1 columns. X[i, j],1 <= i <= n, 0 <= j <= W, is TRUE if and only if there is a subset of {a1 ,a2 ,...,ai} whose elements sum 
+        to j. Which of the following is valid for 2 <= i <= n and ai <= j <= W?
+        
+        A) X[i, j] = X[i - 1, j] ∨ X[i, j -ai]
+        B) X[i, j] = X[i - 1, j] ∨ X[i - 1, j - ai]
+        C) X[i, j] = X[i - 1, j] ∧ X[i, j - ai]
+        D) X[i, j] = X[i - 1, j] ∧ X[i -1, j - ai]
+    </pre>
+    <button onclick="ShowDiv2()" width="100" height="30">SHOW</button>
+    <button onclick="HideDiv2()" width="100" height="30">HIDE</button>
+    <div id="dropdown2" style="display:none">
+        <pre>
+            Correct answwr is B. X[I, j] (2 <= i <= n and ai <= j <= W), is true if any of the following is true:
+            1) Sum of weights excluding ai is equal to j, i.e., if X[i-1, j] is true.
+            2) Sum of weights including ai is equal to j, i.e., if X[i-1, j-ai] is true so that we get (j – ai) + ai as j.
+        </pre>
+    </div>
+    <pre>
+        3) Consider the following table:
+        <img src="https://www.geeksforgeeks.org/wp-content/uploads/3-6.jpg">
+        The task is to pick a subset of these items such that their total weight is no more than 11 Kgs and their total value is maximized. 
+        Moreover, no item may be split. The total value of items picked by an optimal algorithm is denoted by Vopt. A greedy algorithm sorts the 
+        items by their value-to-weight ratios in descending order and packs them greedily, starting from the first item in the ordered list. The 
+        total value of items picked by the greedy algorithm is denoted by Vgreedy. The value of Vopt − Vgreedy is?
+        
+        A) 16
+        B) 20
+        C) 24
+        D) 32
+    </pre>
+    <button onclick="ShowDiv3()" width="100" height="30">SHOW</button>
+    <button onclick="HideDiv3()" width="100" height="30">HIDE</button>
+    <div id="dropdown3" style="display:none">
+        <pre>
+            Correct answer is A. This is really famous DP problem known as KNAPSACK.
+            This is classic question to explain difference between greedy and dynamic programming. The optimized algorithm of
+            this question is through DP. Think about it.
+        </pre>
+    </div>
+    <pre>
+        4) Consider the following two sequences :
+        X = < B, C, D, C, A, B, C >, and 
+        Y = < C, A, D, B, C, B > 
+        The length of longest common subsequence of X and Y is :
+
+        A) 4
+        B) 3
+        C) 5
+        D) 2
+    </pre>
+    <button onclick="ShowDiv4()" width="100" height="30">SHOW</button>
+    <button onclick="HideDiv4()" width="100" height="30">HIDE</button>
+    <div id="dropdown4" style="display:none">
+        <pre>
+            Correct answer is A. This is again really famous application of DP: Longest increaasing subsequence.
+            To practise its coding <a href="https://practice.geeksforgeeks.org/problems/longest-increasing-subsequence-1587115620/1">CLICK HERE</a>
+        </pre>
+    </div><br><br><br>
+    <a href="tutorial4.html">TUTORIAL FOR LEVEL 4</a><br><br>
+    <a href="level5.html">GO TO NEXT LEVEL(Only after completing this level)</a>
+</body>
+</html>
